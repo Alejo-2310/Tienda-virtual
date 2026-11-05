@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuentra celulares POCO, TECNO e Infinix en NovaCell.">
+  <title>NovaCell | Tienda de celulares</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <a class="logo" href="#inicio"><span class="logo-icon">N</span> Nova<span>Cell</span></a>
+    <nav class="navegacion" id="navegacion">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Celulares</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="acciones-header">
+      <button class="btn-login" id="abrirLogin">Iniciar sesión</button>
+      <button class="btn-carrito" id="verCarrito" aria-label="Ver carrito">🛒 <span id="contadorCarrito">0</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-contenido">
+        <span class="etiqueta">TECNOLOGÍA A TU ALCANCE</span>
+        <h1>Tu próximo celular<br><span>está aquí.</span></h1>
+        <p>Descubre celulares increíbles, diseños modernos y tecnología para acompañarte todos los días.</p>
+        <a class="btn-principal" href="#productos">Explorar celulares <span>→</span></a>
+        <div class="hero-datos">
+          <div><strong>15</strong><small>Modelos destacados</small></div>
+          <div><strong>3</strong><small>Marcas disponibles</small></div>
+          <div><strong>100%</strong><small>Atención personalizada</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-circulo"></div>
+        <img src="imagenes/celular-03.jpg" alt="Promoción de celular POCO X8 Pro" class="hero-imagen">
+        <div class="flotante"><span>✦</span><div><b>Renueva tu equipo</b><small>Encuentra tu favorito</small></div></div>
+      </div>
+    </section>
+
+    <section class="beneficios">
+      <article><span>🚚</span><div><b>Envíos</b><small>Consulta cobertura y tarifas</small></div></article>
+      <article><span>🛡️</span><div><b>Compra segura</b><small>Atención y asesoría</small></div></article>
+      <article><span>📱</span><div><b>Grandes marcas</b><small>POCO, TECNO e Infinix</small></div></article>
+    </section>
+
+    <section class="seccion productos-seccion" id="productos">
+      <div class="titulo-seccion">
+        <div><span class="etiqueta">NUESTRO CATÁLOGO</span><h2>Encuentra tu <span>celular ideal</span></h2></div>
+        <p>Explora los modelos disponibles y agrega tus favoritos al carrito.</p>
+      </div>
+      <div class="filtros">
+        <button class="filtro activo" data-filtro="Todos">Todos</button>
+        <button class="filtro" data-filtro="POCO">POCO</button>
+        <button class="filtro" data-filtro="TECNO">TECNO</button>
+        <button class="filtro" data-filtro="Infinix">Infinix</button>
+      </div>
+      <div class="rejilla-productos" id="rejillaProductos"></div>
+    </section>
+
+    <section class="banner" id="nosotros">
+      <div><span class="etiqueta">NOVA CELL</span><h2>La tecnología que buscas,<br><span>con la atención que mereces.</span></h2>
+      <p>Somos una tienda enfocada en acercarte diferentes opciones de celulares. Escríbenos para consultar disponibilidad, precios y características.</p>
+      <a href="#contacto" class="btn-principal">Hablar con un asesor →</a></div>
+      <div class="banner-iconos"><span>📱</span><span>✦</span><span>⚡</span></div>
+    </section>
+
+    <section class="seccion contacto-seccion" id="contacto">
+      <div class="titulo-seccion"><div><span class="etiqueta">ESTAMOS PARA AYUDARTE</span><h2>Contáctanos</h2></div>
+        <p>¿Tienes dudas sobre un equipo? Déjanos tus datos y tu consulta.</p></div>
+      <div class="contacto-contenido">
+        <div class="contacto-info"><h3>Hablemos de tecnología.</h3><p>Completa el formulario y nuestro equipo podrá ponerse en contacto contigo.</p>
+          <div class="dato-contacto"><span>✉</span><div><b>Correo</b><small>Atención al cliente</small></div></div>
+          <div class="dato-contacto"><span>📍</span><div><b>Ubicación</b><small>Pereira, Colombia</small></div></div>
+          <p class="nota-demo">Formulario demostrativo: los datos no se envían a un servidor.</p>
+        </div>
+        <form id="formContacto" class="formulario">
+          <label for="nombre">Nombre completo</label><input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+          <label for="correo">Correo electrónico</label><input id="correo" name="correo" type="email" placeholder="tucorreo@ejemplo.com" required>
+          <label for="asunto">¿Qué celular te interesa?</label><input id="asunto" name="asunto" type="text" placeholder="Modelo o consulta">
+          <label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta..." required></textarea>
+          <button class="btn-principal" type="submit">Enviar consulta →</button>
+          <p id="respuestaContacto" class="respuesta" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="logo" href="#inicio"><span class="logo-icon">N</span> Nova<span>Cell</span></a><p>© 2026 NovaCell. Proyecto educativo de tienda de celulares.</p><a href="#inicio">Volver arriba ↑</a></footer>
+
+  <div class="modal" id="modalLogin" aria-hidden="true">
+    <div class="modal-caja">
+      <button class="cerrar-modal" data-cerrar="modalLogin" aria-label="Cerrar">×</button>
+      <span class="logo-icon">N</span><h2>Bienvenido a NovaCell</h2><p>Ingresa tus datos para continuar.</p>
+      <form id="formLogin">
+        <label for="emailLogin">Correo electrónico</label><input id="emailLogin" type="email" placeholder="correo@ejemplo.com" required>
+        <label for="passwordLogin">Contraseña</label><input id="passwordLogin" type="password" placeholder="Mínimo 6 caracteres" minlength="6" required>
+        <button class="btn-principal" type="submit">Iniciar sesión</button>
+        <p id="respuestaLogin" class="respuesta" aria-live="polite"></p>
+      </form>
+      <small class="nota-demo">Acceso de demostración: no crea cuentas ni valida usuarios reales.</small>
+    </div>
+  </div>
+
+  <div class="modal" id="modalCarrito" aria-hidden="true">
+    <div class="modal-caja carrito-caja">
+      <button class="cerrar-modal" data-cerrar="modalCarrito" aria-label="Cerrar">×</button>
+      <h2>Tu carrito</h2><div id="contenidoCarrito"></div>
+      <button class="btn-principal" id="vaciarCarrito" type="button">Vaciar carrito</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
