@@ -26,7 +26,7 @@ function mostrarProductos(filtro = "Todos") {
     const indice = productos.indexOf(producto);
     return `
       <article class="producto">
-        <div class="producto-imagen"><img src="imagenes/${producto.imagen}" alt="${producto.nombre}" loading="lazy">
+        <div class="producto-imagen"><img src="${producto.imagen}" alt="${producto.nombre}" loading="lazy">
           <span class="marca">${producto.marca}</span>
         </div>
         <div class="producto-info"><h3>${producto.nombre}</h3><p>${producto.descripcion}</p>
